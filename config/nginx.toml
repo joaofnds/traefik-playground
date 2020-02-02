@@ -1,0 +1,11 @@
+[http.routers]
+  [http.routers.nginx]
+    asdf = "asdf"
+    rule = "Host(`nginx`)"
+    service = "nginx"
+
+[http.services]
+  [http.services.nginx]
+    [http.services.nginx.loadBalancer]
+      [[http.services.nginx.loadBalancer.servers]]
+        url = "http://nginx/"

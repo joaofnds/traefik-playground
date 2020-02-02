@@ -1,0 +1,10 @@
+[http.routers]
+  [http.routers.whoami]
+    rule = "Host(`whoami`)"
+    service = "whoami"
+
+[http.services]
+  [http.services.whoami]
+    [http.services.whoami.loadBalancer]
+      [[http.services.whoami.loadBalancer.servers]]
+        url = "http://whoami/"

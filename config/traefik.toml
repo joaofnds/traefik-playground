@@ -1,0 +1,23 @@
+[global]
+checkNewVersion = false
+sendAnonymousUsage = false
+
+[log]
+level = "DEBUG"
+
+[api]
+insecure = true
+dashboard = true
+
+[providers]
+  [providers.docker]
+    exposedByDefault = false
+
+  [providers.file]
+    directory = "/etc/traefik"
+    watch = true
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+
