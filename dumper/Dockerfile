@@ -7,5 +7,6 @@ RUN go build -a -o server .
 FROM scratch
 ARG PORT=80
 ENV PORT $PORT
+EXPOSE $PORT
 COPY --from=BUILD /server/server /server
 ENTRYPOINT ["/server"]
