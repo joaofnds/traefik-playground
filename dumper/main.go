@@ -37,7 +37,6 @@ func main() {
 }
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
-
 	b, err := httputil.DumpRequest(r, true)
 	if err == nil {
 		w.WriteHeader(200)
