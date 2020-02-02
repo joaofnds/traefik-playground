@@ -1,6 +1,5 @@
 [http.routers]
   [http.routers.nginx]
-    asdf = "asdf"
     rule = "Host(`nginx`)"
     service = "nginx"
 
@@ -8,4 +7,22 @@
   [http.services.nginx]
     [http.services.nginx.loadBalancer]
       [[http.services.nginx.loadBalancer.servers]]
-        url = "http://nginx/"
+        url = "http://traefik-playground_nginx_1"
+      [[http.services.nginx.loadBalancer.servers]]
+        url = "http://traefik-playground_nginx_2"
+      [[http.services.nginx.loadBalancer.servers]]
+        url = "http://traefik-playground_nginx_3"
+      [[http.services.nginx.loadBalancer.servers]]
+        url = "http://traefik-playground_nginx_4"
+      [[http.services.nginx.loadBalancer.servers]]
+        url = "http://traefik-playground_nginx_5"
+      [[http.services.nginx.loadBalancer.servers]]
+        url = "http://traefik-playground_nginx_6"
+      [[http.services.nginx.loadBalancer.servers]]
+        url = "http://traefik-playground_nginx_7"
+      [[http.services.nginx.loadBalancer.servers]]
+        url = "http://traefik-playground_nginx_8"
+      [[http.services.nginx.loadBalancer.servers]]
+        url = "http://traefik-playground_nginx_9"
+      [[http.services.nginx.loadBalancer.servers]]
+        url = "http://traefik-playground_nginx_10"

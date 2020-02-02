@@ -7,4 +7,22 @@
   [http.services.whoami]
     [http.services.whoami.loadBalancer]
       [[http.services.whoami.loadBalancer.servers]]
-        url = "http://whoami/"
+        url = "http://traefik-playground_whoami_1"
+      [[http.services.whoami.loadBalancer.servers]]
+        url = "http://traefik-playground_whoami_2"
+      [[http.services.whoami.loadBalancer.servers]]
+        url = "http://traefik-playground_whoami_3"
+      [[http.services.whoami.loadBalancer.servers]]
+        url = "http://traefik-playground_whoami_4"
+      [[http.services.whoami.loadBalancer.servers]]
+        url = "http://traefik-playground_whoami_5"
+      [[http.services.whoami.loadBalancer.servers]]
+        url = "http://traefik-playground_whoami_6"
+      [[http.services.whoami.loadBalancer.servers]]
+        url = "http://traefik-playground_whoami_7"
+      [[http.services.whoami.loadBalancer.servers]]
+        url = "http://traefik-playground_whoami_8"
+      [[http.services.whoami.loadBalancer.servers]]
+        url = "http://traefik-playground_whoami_9"
+      [[http.services.whoami.loadBalancer.servers]]
+        url = "http://traefik-playground_whoami_10"

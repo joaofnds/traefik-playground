@@ -1,0 +1,28 @@
+[http.routers]
+  [http.routers.dumper]
+    rule = "Host(`dumper`)"
+    service = "dumper"
+
+[http.services]
+  [http.services.dumper]
+    [http.services.dumper.loadBalancer]
+      [[http.services.dumper.loadBalancer.servers]]
+        url = "http://traefik-playground_dumper_1"
+      [[http.services.dumper.loadBalancer.servers]]
+        url = "http://traefik-playground_dumper_2"
+      [[http.services.dumper.loadBalancer.servers]]
+        url = "http://traefik-playground_dumper_3"
+      [[http.services.dumper.loadBalancer.servers]]
+        url = "http://traefik-playground_dumper_4"
+      [[http.services.dumper.loadBalancer.servers]]
+        url = "http://traefik-playground_dumper_5"
+      [[http.services.dumper.loadBalancer.servers]]
+        url = "http://traefik-playground_dumper_6"
+      [[http.services.dumper.loadBalancer.servers]]
+        url = "http://traefik-playground_dumper_7"
+      [[http.services.dumper.loadBalancer.servers]]
+        url = "http://traefik-playground_dumper_8"
+      [[http.services.dumper.loadBalancer.servers]]
+        url = "http://traefik-playground_dumper_9"
+      [[http.services.dumper.loadBalancer.servers]]
+        url = "http://traefik-playground_dumper_10"
