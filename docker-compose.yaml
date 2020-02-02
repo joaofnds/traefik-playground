@@ -15,3 +15,7 @@ services:
 
   nginx:
     image: nginx:alpine
+
+  dumper:
+    build:
+      context: dumper
