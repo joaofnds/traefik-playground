@@ -1,1 +1,1 @@
-docker-compose up -d --scale ngixn=10 --scale whoami=10 --scale dumper=10
+docker-compose up -d --scale nginx=10 --scale whoami=10 --scale dumper=10
