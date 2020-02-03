@@ -26,11 +26,7 @@ func main() {
 	})()
 
 	log.Printf("Server up and running at %s\n", addr)
-
-	sigChan := make(chan os.Signal, 1)
-	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
-	<-sigChan
-
+	blockUntilSigTerm()
 	log.Printf("So long friend, goodbye...")
 
 	server.Shutdown(context.Background())
@@ -45,4 +41,10 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(500)
 		w.Write([]byte("failed to dump request"))
 	}
+}
+
+func blockUntilSigTerm() {
+	sigChan := make(chan os.Signal, 1)
+	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
+	<-sigChan
 }
