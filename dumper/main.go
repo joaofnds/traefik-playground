@@ -21,9 +21,9 @@ func main() {
 	addr := ":" + port
 	server := http.Server{Addr: addr}
 
-	go (func() {
+	go func() {
 		log.Fatal(server.ListenAndServe())
-	})()
+	}()
 
 	log.Printf("Server up and running at %s\n", addr)
 	blockUntilSigTerm()
@@ -35,10 +35,10 @@ func main() {
 func rootHandler(w http.ResponseWriter, r *http.Request) {
 	b, err := httputil.DumpRequest(r, true)
 	if err == nil {
-		w.WriteHeader(200)
+		w.WriteHeader(http.StatusOK)
 		w.Write(b)
 	} else {
-		w.WriteHeader(500)
+		w.WriteHeader(http.StatusInternalServerError)
 		w.Write([]byte("failed to dump request"))
 	}
 }
